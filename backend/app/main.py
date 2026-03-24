@@ -21,7 +21,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.FRONTEND_URL, "http://localhost:5173", "https://ai-edition-hrms-portal-7jx6.onrender.com/"],
+    allow_origins=[settings.FRONTEND_URL, "http://localhost:5173", "https://ai-edition-hrms-portal-7jx6.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
