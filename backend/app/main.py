@@ -21,11 +21,13 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "https://ai-edition-hrms-portal-7jx6.onrender.com"],
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+print("CORS LOADED")
 
 app.add_exception_handler(HRMSException, hrms_exception_handler)
 
